@@ -9,7 +9,7 @@
 
 body{
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     background: rgb(238, 174, 202);
     background: radial-gradient(circle, rgb(238,174,202,1) 0%, rgb(148,187,233,1) 100%);
     display: flex;
@@ -22,41 +22,79 @@ body{
     background: radial-gradient(circle, rgb(238, 174, 202, 1) 0%, rgb(148, 187, 233, 1) 100%);
     padding: 1rem;
     border-radius: 25px;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 h1{
-    font-size: 5rem;
+    font-size: 4rem;
     padding: 1rem;
     text-align: center;
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
     color: red;
     border-bottom: 1px solid black;
 }
 .dices{
     display: flex;
     justify-content: center;
+    margin-bottom: 2rem;
 }
 .dices img{
-    margin-right: 20px;
+    width: 125px;
+    height: 125px;
+    margin: 0 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
 }
 .dice-sum{
-    font-size: 3rem;
+    font-size: 2rem;
     text-align: center;
     margin-top: 1rem;
-}
-.btn-roll{
-    width: 150px;
-    padding: 0.5rem;
-    font-size: 2rem;
-    border: none;
-    background-color: green;
-    color: white;
-    cursor: pointer;
-    border-radius: 1.5rem;
-}
-.button-container{
-    text-align: center;
+    padding-bottom: 3rem;
 }
 
+.button-container{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+.btn-start, .btn-restart{
+    width: 200px;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+    border: none;
+    background-color: #d947fd;
+    color: rgb(185, 245, 242);
+    cursor: pointer;
+    border-radius: 1.5rem;
+    margin: 0 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.btn-start:hover, .btn-restart:hover{
+    background-color: #9154a0;
+}
+
+.lblNumber{
+    font-size: 2rem;
+    text-align: center;
+    color: #5b2d66;
+    font-style: unset;
+
+}
+.selectnum{
+    font-size: 1.5rem;
+    color: #9154a0;
+    background-color: rgb(238, 174, 202);
+    margin: 0 0 5rem;
+    justify-content: left;
+    border-radius: .5rem;
+}
+
+.result{
+    font-size: 3rem;
+    text-align: center;
+    color: green;
+    margin-top: 4rem;
+}
 .animation{
     animation: rotate-fadeout 2s;
 }
