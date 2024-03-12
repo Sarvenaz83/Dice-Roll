@@ -4,22 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>Dice Roll</title>
+    <title>Knockout</title>
 </head>
 <body>
     <div class="app-wrapper">
         <h1>Roll The Dices</h1>
         <div class="dice-wrapper">
             <div class="dices">
-                <img src="img/Dice-1.svg.png" alt="" class="dice-1 animation">
-                <img src="img/Dice-1.svg.png" alt="" class="dice-2">
+                <img src="img/dice-1.png" alt="" class="dice-1">
+                <img src="img/dice-1.png" alt="" class="dice-2">
             </div>
             <p class="dice-sum">2</p>
+            <lable for="knockout" class="lblNumber">Select your knockout:</lable>
+            <select class="knockout-number" name="knockout" id="knockout">
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+            </select>
             <div class="button-container">
-                <button class="btn-roll">Roll</button>
+                <button class="btn-start">Start Game</button>
+                <button class="btn-restart">Restart Game</button>
             </div>
+            <p class="result">Result: <span id="result-value"></span></p>
         </div>
     </div>
+    <script>
+        document.getElementById("knockout").selectedIndex = -1;
+    </script>
     <script src="app.js"></script>
 </body>
 </html>
